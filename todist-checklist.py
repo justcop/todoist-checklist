@@ -1,8 +1,7 @@
-import secrets
-
 import requests, json
 import todoist
 from todoist.api import TodoistAPI
+from secrets import api_token
 
 projectid = open("projectid", "r")
 api = TodoistAPI(api_token)
