@@ -11,7 +11,6 @@ except:
        pass
 project = api.projects.add('checklist')
 api.commit()
-print(project["id"])
 api.templates.import_into_project(project["id"], '/share/Checklist.csv')
 with open('projectid', 'w') as f:
-       f.write(project["id"])
+       f.write(str(project["id"]))
