@@ -6,10 +6,11 @@ import todoist
 from todoist.api import TodoistAPI
 from configs import api_token
 
-projectid = open("projectid", "r")
 api = TodoistAPI(api_token)
 api.sync()
-requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + api_token})
+try:
+       projectid = open("projectid", "r")
+       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + api_token})
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
