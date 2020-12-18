@@ -14,6 +14,6 @@ except:
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
-api.templates.import_into_project(project["id"], '/share/Checklist.csv')
+api.templates.import_into_project(project["id"], 'https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv')
 with open('projectid', 'w') as f:
        f.write(str(project["id"]))
