@@ -6,7 +6,7 @@ api.sync()
 project = api.projects.get_by_id(str(projectid.read))
 try:       
        project.delete()
-api.commit()
+       api.commit()
 project = api.projects.add('checklist')
 api.commit()
 print(project["id"])
