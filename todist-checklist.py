@@ -1,7 +1,10 @@
+#! /usr/bin/env python3
+
+
 import requests, json
 import todoist
 from todoist.api import TodoistAPI
-from configs import api_token
+import configs
 
 projectid = open("projectid", "r")
 api = TodoistAPI(api_token)
