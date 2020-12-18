@@ -4,7 +4,7 @@ import todoist
 from todoist.api import TodoistAPI
 from configs import api_token
 
-f = requests.get(https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv)
+f = requests.get("https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv")
 print(str(f))
 
 api = TodoistAPI(api_token)
