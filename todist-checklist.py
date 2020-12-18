@@ -7,9 +7,11 @@ project = api.projects.get_by_id(str(projectid.read))
 try:       
        project.delete()
        api.commit()
-project1 = api.projects.add('checklist')
+except:
+       pass
+project = api.projects.add('checklist')
 api.commit()
-print(project1["id"])
-api.templates.import_into_project(project1["id"], '/share/Checklist.csv')
+print(project["id"])
+api.templates.import_into_project(project["id"], '/share/Checklist.csv')
 with open(projectid, 'w') as f:
-       f.write(project1["id"])
+       f.write(project["id"])
