@@ -7,6 +7,6 @@ api.sync()
 #api.commit()
 project = api.projects.add('checklist')
 api.commit()
-print(project)
+print(project["id"])
 api.templates.import_into_project(project[0]["id"](), '/share/Checklist.csv')
 
