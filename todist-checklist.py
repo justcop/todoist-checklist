@@ -7,7 +7,7 @@ from configs import api_token
 #f = requests.get("https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv")
 #print(str(f.content))
 
-sheet = gc.open_by_key(1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY)
+sheet = gc.open_by_key("1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY")
 worksheet = sheet.get_worksheet(0)
 df = pd.DataFrame(worksheet.get_all_records())
 filename = sheet.title + '.csv'
