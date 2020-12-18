@@ -4,7 +4,7 @@
 import requests, json
 import todoist
 from todoist.api import TodoistAPI
-import configs
+import api_token from configs
 
 projectid = open("projectid", "r")
 api = TodoistAPI(api_token)
