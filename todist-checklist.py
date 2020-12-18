@@ -9,7 +9,9 @@ api = TodoistAPI(api_token)
 api.sync()
 requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + api_token})
 project = api.projects.add('Checklist')
-project["color"] = 41
+#project = api.projects.get_by_id(128501815)
+project.update(color='41')
+#project["color"] = 41
 print(project)
 api.commit()
 api.templates.import_into_project(project["id"], '/share/Checklist.csv')
