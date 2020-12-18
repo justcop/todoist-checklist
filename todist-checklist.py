@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 import requests, json
 import todoist
+import gspread
 from todoist.api import TodoistAPI
 from configs import api_token
 
