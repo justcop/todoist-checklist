@@ -8,6 +8,6 @@ print(api.state['projects'])
 #api.commit()
 project = api.projects.add('checklist')
 api.commit()
-print(project)
-#api.templates.import_into_project(128501470, '/share/Checklist.csv')
+print(project[0]["id"])
+api.templates.import_into_project(project[0]["id"](), '/share/Checklist.csv')
 
