@@ -6,7 +6,7 @@ projectid = open("projectid", "r")
 api = TodoistAPI('5010e354fbb1e86dd6fff9f7ef9880324ce40989')
 api.sync()
 #project = api.projects.get_by_id(str(projectid.read()))
-requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer %s" % 5010e354fbb1e86dd6fff9f7ef9880324ce40989})
+requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer 5010e354fbb1e86dd6fff9f7ef9880324ce40989"})
 #try:       
 #       project.delete()
 #       api.commit()
