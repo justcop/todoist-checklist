@@ -12,8 +12,8 @@ requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read
 #       api.commit()
 #except:
 #       pass
-project.delete()
-api.commit()
+#project.delete()
+#api.commit()
 project = api.projects.add('checklist')
 api.commit()
 api.templates.import_into_project(project["id"], '/share/Checklist.csv')
