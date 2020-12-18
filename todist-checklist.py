@@ -3,7 +3,7 @@ from todoist.api import TodoistAPI
 projectid = open("projectid", "r")
 api = TodoistAPI('5010e354fbb1e86dd6fff9f7ef9880324ce40989')
 api.sync()
-project = api.projects.get_by_id(str(projectid.read))
+project = api.projects.get_by_id(str(projectid.read()))
 #try:       
 #       project.delete()
 #       api.commit()
