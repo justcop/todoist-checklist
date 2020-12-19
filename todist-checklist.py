@@ -4,13 +4,10 @@ import todoist
 import gspread
 from todoist.api import TodoistAPI
 from configs import api_token
+from configs import gsheets_ID
 
-#f = requests.get("https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv")
-#print(str(f.content))
-
-csv_url='https://docs.google.com/spreadsheets/d/169AMdEzYzH7NDY20RCcyf-JpxPSUaO0nC5JRUb8wwvc/export?format=csv&id=169AMdEzYzH7NDY20RCcyf-JpxPSUaO0nC5JRUb8wwvc&gid=0'
-res=requests.get(url=csv_url)
-open('google.csv', 'wb').write(res.content)
+res=requests.get(url='https://docs.google.com/spreadsheets/d/' + gsheets_ID + '/export?format=csv&id=' + gsheets_ID + '&gid=0')
+open('checklist.csv', 'wb').write(res.content)
 
 api = TodoistAPI(api_token)
 api.sync()
@@ -22,6 +19,6 @@ except:
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
-api.templates.import_into_project(project["id"], '')
+api.templates.import_into_project(project["id"], 'checklist.csv')
 with open('projectid', 'w') as f:
        f.write(str(project["id"]))
