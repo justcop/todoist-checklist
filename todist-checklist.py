@@ -8,12 +8,9 @@ from configs import api_token
 #f = requests.get("https://docs.google.com/spreadsheets/d/1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY/gviz/tq?tqx=out:csv")
 #print(str(f.content))
 
-gc = gspread.service_account()
-sheet = gc.open_by_key("1xzHvUuTLteQDt0mgByuj7Zypnv-7LUQmPP2Ij-mq5IY")
-worksheet = sheet.get_worksheet(0)
-df = pd.DataFrame(worksheet.get_all_records())
-filename = sheet.title + '.csv'
-df.to_csv(filename, index=False)
+csv_url='https://docs.google.com/spreadsheets/d/169AMdEzYzH7NDY20RCcyf-JpxPSUaO0nC5JRUb8wwvc/export?format=csv&id=169AMdEzYzH7NDY20RCcyf-JpxPSUaO0nC5JRUb8wwvc&gid=0'
+res=requests.get(url=csv_url)
+open('google.csv', 'wb').write(res.content)
 
 api = TodoistAPI(api_token)
 api.sync()
