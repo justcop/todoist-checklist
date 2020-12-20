@@ -1,0 +1,40 @@
+TYPE,CONTENT,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE
+task,https://todoist.com/API/v8.7/import/project_from_url?t_url=https%3A%2F%2Fd1aspxi4rjqbaz.cloudfront.net%2Fe0e393a337b00ff3967db36a0260f9b0_Checklist.csv,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+section,Work,,,,,,,
+task,Prescriptions,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Labs,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Tasks,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Docman,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Email,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Visits,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Documents @Checklist,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+section,Home,,,,,,,
+section,Work,,,,,,,
+task,Prescriptions,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Labs,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Documents,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Tasks,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Docman,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Email,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+task,Visits,4,1,justcop (8516681),,,en,Europe/London
+,,,,,,,,
+section,Home,,,,,,,
+task,Home Task Gathering @Checklist,4,1,justcop (8516681),,69 days ago,en,Europe/London
+,,,,,,,,
+task,Whatsapp/Facebook,4,2,justcop (8516681),,every! day,en,Europe/London
+,,,,,,,,
+task,Letters,4,2,justcop (8516681),,every! day,en,Europe/London
