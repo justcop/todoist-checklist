@@ -1,19 +1,16 @@
 #! /usr/bin/env python3
-import requests, json
-import todoist
-import gspread
+import requests, json, todoist
 from todoist.api import TodoistAPI
-from configs import api_token
-from configs import gsheets_ID
+from configs import todist_token, gsheets_ID, gsheets_GID
 
-res=requests.get(url='https://docs.google.com/spreadsheets/d/' + gsheets_ID + '/export?format=csv&id=' + gsheets_ID + '&gid=1945771763')
+res=requests.get(url='https://docs.google.com/spreadsheets/d/' + gsheets_ID + '/export?format=csv&id=' + gsheets_ID + '&gid=' + gsheets_GID)
 open('checklist.csv', 'wb').write(res.content)
 
-api = TodoistAPI(api_token)
+api = TodoistAPI(todoist_token)
 api.sync()
 try:
        projectid = open("projectid", "r")
-       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + api_token})
+       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
 except:
        pass
 project = api.projects.add('Checklists')
