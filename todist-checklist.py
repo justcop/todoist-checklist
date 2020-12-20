@@ -6,7 +6,7 @@ from todoist.api import TodoistAPI
 from configs import api_token
 from configs import gsheets_ID
 
-res=requests.get(url='https://docs.google.com/spreadsheets/d/' + gsheets_ID + '/export?format=csv&id=' + gsheets_ID + '&gid=0')
+res=requests.get(url='https://docs.google.com/spreadsheets/d/' + gsheets_ID + '/export?format=csv&id=' + gsheets_ID + '&gid=1945771763')
 open('checklist.csv', 'wb').write(res.content)
 
 api = TodoistAPI(api_token)
