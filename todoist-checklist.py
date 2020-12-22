@@ -15,8 +15,10 @@ api.sync()
 #       pass
 projectid = open("projectid", "r")
 projectid = str(projectid.read())
+print(projectid)
+
 project = api.projects.get_by_id(projectid)
-project.delete()
+project.archive()
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
