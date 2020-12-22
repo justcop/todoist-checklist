@@ -13,7 +13,8 @@ api.sync()
 #       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
 #except:
 #       pass
-projectid = int(projectid.read(open("projectid", "r")))
+projectid = open("projectid", "r")
+projectid = int(projectid.read(projectid)
 project = api.projects.get_by_id(projectid)
 project.delete()
 print(project) 
