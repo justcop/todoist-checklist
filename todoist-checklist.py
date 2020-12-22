@@ -18,7 +18,7 @@ projectid = str(projectid.read())
 print(projectid)
 
 project = api.projects.get_by_id(projectid)
-dir(project)
+print(dir(project)) 
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
