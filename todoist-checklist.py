@@ -14,8 +14,9 @@ api.sync()
 #except:
 #       pass
 projectid = open("projectid", "r")
-h = requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
-print(h)
+projectid = str(projectid.read())
+project = api.projects.get_by_id(projectid)
+project.delete()
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
