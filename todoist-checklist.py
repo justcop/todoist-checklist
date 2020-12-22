@@ -14,7 +14,8 @@ api.sync()
 #except:
 #       pass
 projectid = open("projectid", "r")
-projectid = int(str(projectid.read(projectid))) 
+projectid = str(projectid.read(projectid))
+projectid = int(projectid)
 project = api.projects.get_by_id(projectid)
 project.delete()
 print(project) 
