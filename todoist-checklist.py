@@ -17,7 +17,7 @@ projectid = open("projectid", "r")
 projectid = str(projectid.read())
 print(projectid)
 
-project = api.projects.get_by_id(2253180218)
+project = api.projects.get_by_id(projectid[0:9])
 project.delete()
 print(project) 
 project = api.projects.add('Checklists')
