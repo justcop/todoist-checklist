@@ -8,11 +8,13 @@ open('checklist.csv', 'wb').write(res.content)
 
 api = TodoistAPI(todoist_token)
 api.sync()
-try:
-       projectid = open("projectid", "r")
-       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
-except:
-       pass
+#try:
+#       projectid = open("projectid", "r")
+#       requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
+#except:
+#       pass
+projectid = open("projectid", "r")
+requests.delete("https://api.todoist.com/rest/v1/projects/" + str(projectid.read()), headers={"Authorization": "Bearer " + todoist_token})
 project = api.projects.add('Checklists')
 project.update(color='31')
 api.commit()
