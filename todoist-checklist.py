@@ -14,6 +14,7 @@ try:
        projectid = int(str(projectid.read()))
        project = api.projects.get_by_id(projectid)
        project.delete()
+       print('Deleting Existing Project')
 except:
        print('Unable to delete existing project')
 
