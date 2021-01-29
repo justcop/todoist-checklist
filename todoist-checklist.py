@@ -19,8 +19,11 @@ except:
 
 project = api.projects.add('Checklists') #, color='31')
 api.commit()
+print('Adding new replacement project')
 
 api.templates.import_into_project(project["id"], 'checklist.csv')
+print('Importing checklist template')
 
 with open('projectid', 'w') as f:
        f.write(str(project["id"]))
+print('Saving new project\'s ID')
