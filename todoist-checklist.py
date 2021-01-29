@@ -17,7 +17,7 @@ try:
 except:
        print('Unable to delete existing project')
 
-project = api.projects.add('Checklists', color='31')
+project = api.projects.add('Checklists') #, color='31')
 api.commit()
 
 api.templates.import_into_project(project["id"], 'checklist.csv')
