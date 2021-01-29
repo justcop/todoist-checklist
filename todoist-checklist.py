@@ -17,7 +17,7 @@ try:
 except:
        print('Unable to delete existing project')
 
-project = api.projects.add('Checklists') #, color='31')
+project = api.projects.add('Checklists', color=31)
 api.commit()
 print('Adding new replacement project')
 
